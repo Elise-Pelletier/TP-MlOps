@@ -15,4 +15,6 @@ with open(CONFIG_PATH, "r") as f:
     CONFIG = yaml.load(f, Loader=yaml.SafeLoader)
 
     for key, value in CONFIG['paths'].items():
-        CONFIG['paths'][key] = get_full_path(value)
+    # Ne pas modifier les URLs (on détecte si ça commence par 'http')
+        if not value.startswith("http"):
+            CONFIG['paths'][key] = get_full_path(value)

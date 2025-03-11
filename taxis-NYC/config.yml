@@ -1,5 +1,8 @@
 paths:
   db_path: ./data/New_York_City_Taxi_Trip_Duration.csv
   model_path: ./model-registry/taxi.model
+  zip_url : https://github.com/eishkina-estia/ML2023/raw/main/data/New_York_City_Taxi_Trip_Duration.zip
+  zip_path : ./data/New_York_City_Taxi_Trip_Duration.zip
+  extract_folder : ./data/NYC_Taxi_Trip_Duration
 ml:
   random_state: 42
